@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <ul>
+        {% for student in students %}
+        <h1>Студент: {{student.firstname}} {{student. lastname}}</h1>
+        {% for sc in student.scores %}
+        <li> Предмет: {{sc.name}} Оценка: {{sc.score}}</li>
+        <br>
+        {% endfor %}
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}
